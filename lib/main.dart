@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'backEnd/universityList.dart';
 
 void main() {
   runApp(MyApp());
@@ -7,7 +8,7 @@ void main() {
 
 // This widget is the main application widget.
 class MyApp extends StatelessWidget {
-    static const String _title = 'Transfer Assistant';
+  static const String _title = 'Transfer Assistant';
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
 class MyStatefulWidget extends StatefulWidget {
   MyStatefulWidget({Key key}) : super(key: key);
 
@@ -32,9 +34,9 @@ class MyStatefulWidget extends StatefulWidget {
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   String dropdownValue = 'WyoTech';
 
-  @override 
+  @override
   Widget build(BuildContext context) {
-    return DropdownButton<String> (
+    return DropdownButton<String>(
       value: dropdownValue,
       icon: Icon(Icons.cake),
       iconSize: 24,
@@ -49,8 +51,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           dropdownValue = newValue;
         });
       },
-      items: <String>['WyoTech', 'Northwest College', 'University of Wyoming', 'Casper College']
-          .map<DropdownMenuItem<String>>((String value) {
+      items: getUniversityList().map<DropdownMenuItem<String>>((String value) {
         return DropdownMenuItem<String>(
           value: value,
           child: Text(value),
@@ -59,4 +60,3 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     );
   }
 }
-   
