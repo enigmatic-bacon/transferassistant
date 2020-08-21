@@ -14,7 +14,7 @@ class TaskPage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text(
-            college.getName(),
+            'college name',
           ),
           FlatButton(
             onPressed: () {

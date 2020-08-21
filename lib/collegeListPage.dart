@@ -27,6 +27,9 @@ class CollegeListPage extends StatelessWidget {
                   color: Colors.deepPurple,
                   college:
                       College(name: 'Tibet University', deadline: 'Oct 1st'),
+                  onTap: () {
+                    Navigator.pushNamed(context, '/second');
+                  },
                 ),
               ],
             ),
