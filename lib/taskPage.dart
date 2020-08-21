@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:transferapp/college.dart';
 
 class TaskPage extends StatelessWidget {
+  final College college;
+
+  TaskPage({this.college});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -8,6 +13,9 @@ class TaskPage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          Text(
+            college.getName(),
+          ),
           FlatButton(
             onPressed: () {
               Navigator.pop(context);

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'collegeCard.dart';
+import 'college.dart';
 
 class CollegeListPage extends StatelessWidget {
   @override
@@ -16,11 +17,16 @@ class CollegeListPage extends StatelessWidget {
               children: [
                 CollegeCard(
                   color: Colors.green,
-                  collegeName: 'Taiwan University',
+                  college:
+                      College(name: 'Taiwan University', deadline: 'Oct 1st'),
+                  onTap: () {
+                    Navigator.pushNamed(context, '/second');
+                  },
                 ),
                 CollegeCard(
                   color: Colors.deepPurple,
-                  collegeName: 'Taiwan University',
+                  college:
+                      College(name: 'Tibet University', deadline: 'Oct 1st'),
                 ),
               ],
             ),
@@ -28,11 +34,13 @@ class CollegeListPage extends StatelessWidget {
               children: [
                 CollegeCard(
                   color: Colors.orange,
-                  collegeName: 'Taiwan University',
+                  college:
+                      College(name: 'Thailand University', deadline: 'Oct 1st'),
                 ),
                 CollegeCard(
                   color: Colors.pink,
-                  collegeName: 'Taiwan University',
+                  college:
+                      College(name: 'Texas University', deadline: 'Oct 1st'),
                 ),
               ],
             ),
