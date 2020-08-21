@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'helloPage.dart';
 import 'collegeListPage.dart';
 import 'taskPage.dart';
+import 'constants.dart';
 
 void main() => runApp(MyApp());
 
@@ -16,6 +17,10 @@ class MyApp extends StatelessWidget {
         '/first': (context) => CollegeListPage(),
         '/second': (context) => TaskPage(),
       },
+      theme: ThemeData.light().copyWith(
+        primaryColor: kThemePrimaryColor,
+        scaffoldBackgroundColor: Colors.white,
+      ),
     );
   }
 }
