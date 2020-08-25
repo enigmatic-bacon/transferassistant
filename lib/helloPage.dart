@@ -9,7 +9,6 @@ class HelloPage extends StatefulWidget {
 }
 
 class _HelloPageState extends State<HelloPage> {
-  String dropdownValue = 'WyoTech';
   SimpleAutoCompleteTextField textField;
   GlobalKey<AutoCompleteTextFieldState<String>> textFieldKey = new GlobalKey();
   List<String> added = [];
